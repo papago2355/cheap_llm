@@ -6,15 +6,15 @@
   --bg-2:      #111729;
   --panel:     #131a2e;
   --panel-2:   #0e1422;
-  --ink:       #e8ecf6;
-  --ink-dim:   #9aa6c4;
-  --line:      #2a3556;
+  --ink:       #f4f7ff;
+  --ink-dim:   #c3cce6;
+  --line:      #34416b;
 
-  --green:     #54f0b8;
-  --yellow:    #ffd23f;
-  --red:       #ff5d73;
-  --blue:      #7db4ff;
-  --purple:    #b98cff;
+  --green:     #6dffc6;
+  --yellow:    #ffd84d;
+  --red:       #ff7385;
+  --blue:      #9cc6ff;
+  --purple:    #c9a4ff;
 
   --worth: var(--green);
   --solid: var(--blue);
@@ -31,17 +31,22 @@ html { background: var(--bg); }
 body {
   margin: 0;
   font-family: "VT323", monospace;
-  font-size: 22px;
-  line-height: 1.35;
+  font-size: 25px;
+  line-height: 1.5;
   color: var(--ink);
   background:
     radial-gradient(circle at 20% -10%, #1a2b4d 0, transparent 40%),
-    repeating-linear-gradient(0deg,  transparent 0 7px, rgba(255,255,255,.012) 7px 8px),
-    repeating-linear-gradient(90deg, transparent 0 7px, rgba(255,255,255,.012) 7px 8px),
+    repeating-linear-gradient(0deg,  transparent 0 7px, rgba(255,255,255,.02) 7px 8px),
+    repeating-linear-gradient(90deg, transparent 0 7px, rgba(255,255,255,.02) 7px 8px),
     var(--bg);
   background-attachment: fixed;
-  -webkit-font-smoothing: none;
-  image-rendering: pixelated;
+}
+
+/* Pixel headings keep crisp; body keeps VT323 readable with normal antialiasing */
+h1, h2, .pixbtn, .rank-badge, .verdict, .price, .cwi-num, .svc-name,
+.tagline, .week, .delta, .note .tag, .chip, .site-footer, .control-label {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
@@ -49,9 +54,9 @@ body {
 /* CRT scanline overlay */
 .scanlines {
   position: fixed; inset: 0; z-index: 999; pointer-events: none;
-  background: repeating-linear-gradient(180deg, rgba(0,0,0,.18) 0 2px, transparent 2px 4px);
+  background: repeating-linear-gradient(180deg, rgba(0,0,0,.10) 0 2px, transparent 2px 4px);
   mix-blend-mode: multiply;
-  opacity: .5;
+  opacity: .35;
 }
 
 /* ---------- Header ---------- */
@@ -77,14 +82,14 @@ body {
 
 .tagline {
   font-family: "Press Start 2P", monospace;
-  font-size: clamp(8px, 1.6vw, 12px);
-  color: var(--ink-dim);
+  font-size: clamp(10px, 1.7vw, 13px);
+  color: var(--ink);
   letter-spacing: 3px;
-  margin: 16px 0 8px;
+  margin: 18px 0 10px;
 }
 .week {
   font-family: "Press Start 2P", monospace;
-  font-size: 10px;
+  font-size: 12px;
   color: var(--purple);
   letter-spacing: 2px;
   margin: 0;
@@ -98,7 +103,7 @@ body {
   padding: 18px 20px;
   margin: 26px 0;
 }
-.intro { margin-top: 32px; font-size: 23px; }
+.intro { margin-top: 32px; font-size: 25px; }
 .intro strong { color: var(--green); }
 .hl { color: var(--yellow); }
 
@@ -106,12 +111,12 @@ body {
 .controls { display: flex; flex-wrap: wrap; gap: 18px 28px; align-items: center; justify-content: space-between; }
 .control-group { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .control-label, .sorts .control-label {
-  font-family: "Press Start 2P", monospace; font-size: 9px; color: var(--ink-dim); margin-right: 4px;
+  font-family: "Press Start 2P", monospace; font-size: 11px; color: var(--ink); margin-right: 4px;
 }
 
 .pixbtn {
   font-family: "Press Start 2P", monospace;
-  font-size: 10px;
+  font-size: 12px;
   color: var(--ink);
   background: var(--panel-2);
   border: var(--px) solid var(--line);
@@ -129,7 +134,7 @@ body {
 
 /* ---------- Category blurb ---------- */
 .cat-blurb {
-  font-size: 21px; color: var(--ink-dim); margin: 0 0 18px; padding-left: 6px;
+  font-size: 24px; color: var(--ink); margin: 0 0 18px; padding-left: 10px;
   border-left: var(--px) solid var(--purple);
 }
 
@@ -154,21 +159,21 @@ body {
 
 .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
 .rank-badge {
-  font-family: "Press Start 2P", monospace; font-size: 9px;
-  color: var(--bg); background: var(--card-accent, var(--green));
-  padding: 6px 7px; white-space: nowrap;
+  font-family: "Press Start 2P", monospace; font-size: 10px;
+  color: #07101e; background: var(--card-accent, var(--green));
+  padding: 7px 8px; white-space: nowrap;
 }
-.vendor { font-size: 18px; color: var(--ink-dim); letter-spacing: 1px; text-transform: uppercase; }
-.svc-name { font-family: "Press Start 2P", monospace; font-size: 14px; color: var(--ink); margin: 2px 0 0; line-height: 1.5; }
-.svc-plan { font-size: 19px; color: var(--card-accent, var(--green)); letter-spacing: 1px; }
+.vendor { font-size: 20px; color: var(--blue); letter-spacing: 1.5px; text-transform: uppercase; }
+.svc-name { font-family: "Press Start 2P", monospace; font-size: 15px; color: var(--ink); margin: 4px 0 2px; line-height: 1.55; }
+.svc-plan { font-size: 22px; color: var(--card-accent, var(--green)); letter-spacing: 1px; }
 
 .price-row { display: flex; align-items: baseline; gap: 10px; }
-.price { font-family: "Press Start 2P", monospace; font-size: 20px; color: var(--yellow); }
-.price-unit { font-size: 17px; color: var(--ink-dim); }
+.price { font-family: "Press Start 2P", monospace; font-size: 22px; color: var(--yellow); }
+.price-unit { font-size: 19px; color: var(--ink-dim); }
 
 /* worth meter */
-.meter-label { display: flex; justify-content: space-between; align-items: center; font-size: 17px; color: var(--ink-dim); letter-spacing: 1px; }
-.cwi-num { font-family: "Press Start 2P", monospace; font-size: 16px; color: var(--card-accent, var(--green)); }
+.meter-label { display: flex; justify-content: space-between; align-items: center; font-size: 19px; color: var(--ink); letter-spacing: 1px; }
+.cwi-num { font-family: "Press Start 2P", monospace; font-size: 17px; color: var(--card-accent, var(--green)); }
 .meter {
   display: grid; grid-template-columns: repeat(20, 1fr); gap: 2px;
   background: var(--panel-2); padding: 4px; border: 2px solid var(--line);
@@ -179,16 +184,16 @@ body {
 /* verdict stamp */
 .verdict {
   align-self: flex-start;
-  font-family: "Press Start 2P", monospace; font-size: 10px;
-  padding: 8px 10px; letter-spacing: 1px;
+  font-family: "Press Start 2P", monospace; font-size: 12px;
+  padding: 9px 11px; letter-spacing: 1px;
   border: 3px solid var(--card-accent); color: var(--card-accent);
-  background: rgba(0,0,0,.25);
+  background: rgba(0,0,0,.35);
   transform: rotate(-3deg);
 }
 
-.notes { display: flex; flex-direction: column; gap: 7px; font-size: 19px; }
-.note { display: flex; gap: 8px; }
-.note .tag { font-family: "Press Start 2P", monospace; font-size: 8px; padding-top: 3px; white-space: nowrap; }
+.notes { display: flex; flex-direction: column; gap: 9px; font-size: 22px; }
+.note { display: flex; gap: 9px; }
+.note .tag { font-family: "Press Start 2P", monospace; font-size: 10px; padding-top: 4px; white-space: nowrap; }
 .note.best .tag { color: var(--green); }
 .note.weak .tag { color: var(--red); }
 .note .txt { color: var(--ink); }
@@ -198,41 +203,42 @@ body {
 .spark { display: flex; align-items: flex-end; gap: 3px; height: 34px; }
 .spark .bar { width: 7px; background: var(--ink-dim); }
 .spark .bar:last-child { background: var(--card-accent, var(--green)); }
-.delta { font-size: 18px; font-family: "Press Start 2P", monospace; font-size: 10px; white-space: nowrap; }
+.delta { font-family: "Press Start 2P", monospace; font-size: 12px; white-space: nowrap; }
 .delta.up { color: var(--green); }
 .delta.down { color: var(--red); }
 .delta.flat { color: var(--ink-dim); }
 
 .card-link {
-  font-family: "Press Start 2P", monospace; font-size: 9px;
-  color: var(--ink-dim); text-decoration: none; margin-top: 2px;
+  font-family: "Press Start 2P", monospace; font-size: 11px;
+  color: var(--blue); text-decoration: none; margin-top: 2px;
   border-top: 2px dotted var(--line); padding-top: 12px;
 }
 .card-link:hover { color: var(--blue); }
 .card-link::after { content: " →"; }
 
 /* ---------- Methodology ---------- */
-.methodology h2 { font-family: "Press Start 2P", monospace; font-size: 13px; color: var(--purple); margin: 0 0 14px; }
-.methodology ol { margin: 0; padding-left: 22px; }
-.methodology li { margin-bottom: 12px; }
+.methodology h2 { font-family: "Press Start 2P", monospace; font-size: 14px; color: var(--purple); margin: 0 0 16px; line-height: 1.5; }
+.methodology ol { margin: 0; padding-left: 24px; }
+.methodology li { margin-bottom: 14px; font-size: 23px; }
 .methodology strong { color: var(--green); }
-.methodology code { color: var(--yellow); background: var(--panel-2); padding: 1px 5px; border: 1px solid var(--line); font-size: 18px; }
+.methodology em { color: var(--yellow); font-style: normal; }
+.methodology code { color: var(--yellow); background: var(--panel-2); padding: 2px 6px; border: 1px solid var(--line); font-size: 21px; }
 .chip {
-  display: inline-block; font-family: "Press Start 2P", monospace; font-size: 8px;
-  padding: 4px 6px; margin: 3px 4px 0 0; color: var(--bg);
+  display: inline-block; font-family: "Press Start 2P", monospace; font-size: 10px;
+  padding: 6px 8px; margin: 4px 5px 0 0; color: #07101e;
 }
 .chip.worth { background: var(--worth); } .chip.solid { background: var(--solid); }
 .chip.meh { background: var(--meh); } .chip.bad { background: var(--bad); }
-.disclaimer { color: var(--ink-dim); font-size: 18px; margin: 14px 0 0; }
+.disclaimer { color: var(--ink-dim); font-size: 21px; margin: 16px 0 0; }
 
 /* ---------- Footer ---------- */
 .site-footer {
   text-align: center; padding: 30px 0 50px; color: var(--ink-dim);
-  font-family: "Press Start 2P", monospace; font-size: 8px; letter-spacing: 1px;
+  font-family: "Press Start 2P", monospace; font-size: 10px; letter-spacing: 1px; line-height: 1.8;
 }
 
 @media (max-width: 520px) {
-  body { font-size: 20px; }
+  body { font-size: 22px; }
   .grid { grid-template-columns: 1fr; }
   .controls { flex-direction: column; align-items: flex-start; }
 }

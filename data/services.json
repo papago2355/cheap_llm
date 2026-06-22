@@ -1,0 +1,923 @@
+{
+  "meta": {
+    "title": "IS IT WORTH IT?",
+    "subtitle": "AI Service Cost-Worth Index",
+    "methodologyVersion": "1.0",
+    "weekOf": "2026-06-22",
+    "generatedAt": "2026-06-22T19:24:31"
+  },
+  "categories": [
+    {
+      "id": "coding",
+      "name": "AI Coding",
+      "icon": "code",
+      "valueLabel": "Capability pts",
+      "blurb": "Usable frontier-model coding throughput: quota + model access + agentic features."
+    },
+    {
+      "id": "generation",
+      "name": "AI Image Gen",
+      "icon": "image",
+      "valueLabel": "Images / mo",
+      "blurb": "Approx. monthly image generations at usable resolution within the plan's quota."
+    },
+    {
+      "id": "music",
+      "name": "AI Music",
+      "icon": "music",
+      "valueLabel": "Songs / mo",
+      "blurb": "Approx. monthly full-length song generations from the plan's credit pool."
+    },
+    {
+      "id": "research",
+      "name": "AI Research",
+      "icon": "book",
+      "valueLabel": "Feature pts",
+      "blurb": "Depth of research tooling: citation analysis, full-text Q&A, library size, exports."
+    }
+  ],
+  "services": [
+    {
+      "id": "cc-pro",
+      "name": "Claude Code",
+      "plan": "Pro",
+      "vendor": "Anthropic",
+      "category": "coding",
+      "priceMonthly": 20,
+      "valuePoints": 95,
+      "bestFor": "Light daily coding, learning, side projects.",
+      "weakness": "Tight weekly limits; heavy agentic runs hit caps fast.",
+      "link": "https://www.anthropic.com/pricing",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 78
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 79
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 80
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 80
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 81
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 75
+        }
+      ],
+      "valuePerDollar": 4.75,
+      "cwi": 75,
+      "verdict": "SOLID",
+      "rank": 9
+    },
+    {
+      "id": "cc-max5",
+      "name": "Claude Code",
+      "plan": "Max 5x",
+      "vendor": "Anthropic",
+      "category": "coding",
+      "priceMonthly": 100,
+      "valuePoints": 560,
+      "bestFor": "Serious daily driver for full-time builders.",
+      "weakness": "Still throttles on marathon Opus sessions.",
+      "link": "https://www.anthropic.com/pricing",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 88
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 89
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 90
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 91
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 92
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 89
+        }
+      ],
+      "valuePerDollar": 5.6,
+      "cwi": 89,
+      "verdict": "WORTH IT",
+      "rank": 4
+    },
+    {
+      "id": "cc-max20",
+      "name": "Claude Code",
+      "plan": "Max 20x",
+      "vendor": "Anthropic",
+      "category": "coding",
+      "priceMonthly": 200,
+      "valuePoints": 1260,
+      "bestFor": "All-day Opus agentic coding; best raw quota-per-dollar.",
+      "weakness": "Overkill if you don't code many hours daily.",
+      "link": "https://www.anthropic.com/pricing",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 93
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 94
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 95
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 96
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 97
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 100
+        }
+      ],
+      "valuePerDollar": 6.3,
+      "cwi": 100,
+      "verdict": "WORTH IT",
+      "rank": 1
+    },
+    {
+      "id": "cursor-pro",
+      "name": "Cursor",
+      "plan": "Pro",
+      "vendor": "Anysphere",
+      "category": "coding",
+      "priceMonthly": 20,
+      "valuePoints": 105,
+      "bestFor": "IDE-native editing with multi-model choice.",
+      "weakness": "Request-based limits; frontier models burn quota quickly.",
+      "link": "https://cursor.com/pricing",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 84
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 83
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 83
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 82
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 82
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 83
+        }
+      ],
+      "valuePerDollar": 5.25,
+      "cwi": 83,
+      "verdict": "SOLID",
+      "rank": 7
+    },
+    {
+      "id": "cursor-ultra",
+      "name": "Cursor",
+      "plan": "Ultra",
+      "vendor": "Anysphere",
+      "category": "coding",
+      "priceMonthly": 200,
+      "valuePoints": 1080,
+      "bestFor": "20x quota for power users staying inside the IDE.",
+      "weakness": "Value tracks underlying API; less edge than vertically integrated CC.",
+      "link": "https://cursor.com/pricing",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 84
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 84
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 83
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 83
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 83
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 86
+        }
+      ],
+      "valuePerDollar": 5.4,
+      "cwi": 86,
+      "verdict": "WORTH IT",
+      "rank": 5
+    },
+    {
+      "id": "copilot-pro",
+      "name": "GitHub Copilot",
+      "plan": "Pro",
+      "vendor": "GitHub",
+      "category": "coding",
+      "priceMonthly": 10,
+      "valuePoints": 60,
+      "bestFor": "Cheap autocomplete + light chat across every editor.",
+      "weakness": "Premium-request model gutted frontier value — Opus now ~14x pricier per use.",
+      "link": "https://github.com/features/copilot/plans",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 95
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 92
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 74
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 72
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 71
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 95
+        }
+      ],
+      "valuePerDollar": 6.0,
+      "cwi": 95,
+      "verdict": "WORTH IT",
+      "rank": 2
+    },
+    {
+      "id": "copilot-proplus",
+      "name": "GitHub Copilot",
+      "plan": "Pro+",
+      "vendor": "GitHub",
+      "category": "coding",
+      "priceMonthly": 39,
+      "valuePoints": 210,
+      "bestFor": "More premium requests for mixed-model workflows.",
+      "weakness": "Premium-request multipliers make heavy Opus use expensive fast.",
+      "link": "https://github.com/features/copilot/plans",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 90
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 88
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 79
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 78
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 78
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 85
+        }
+      ],
+      "valuePerDollar": 5.38,
+      "cwi": 85,
+      "verdict": "WORTH IT",
+      "rank": 6
+    },
+    {
+      "id": "codex-plus",
+      "name": "OpenAI Codex",
+      "plan": "ChatGPT Plus",
+      "vendor": "OpenAI",
+      "category": "coding",
+      "priceMonthly": 20,
+      "valuePoints": 100,
+      "bestFor": "Codex CLI bundled into an existing ChatGPT Plus sub.",
+      "weakness": "Coding quota shares the ChatGPT pool; limits are opaque.",
+      "link": "https://openai.com/chatgpt/pricing",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 80
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 81
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 81
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 82
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 82
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 79
+        }
+      ],
+      "valuePerDollar": 5.0,
+      "cwi": 79,
+      "verdict": "SOLID",
+      "rank": 8
+    },
+    {
+      "id": "codex-pro",
+      "name": "OpenAI Codex",
+      "plan": "ChatGPT Pro",
+      "vendor": "OpenAI",
+      "category": "coding",
+      "priceMonthly": 200,
+      "valuePoints": 1140,
+      "bestFor": "Near-unlimited Codex for heavy agentic sessions.",
+      "weakness": "$200 floor; only worth it at high daily volume.",
+      "link": "https://openai.com/chatgpt/pricing",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 86
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 87
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 88
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 88
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 89
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 90
+        }
+      ],
+      "valuePerDollar": 5.7,
+      "cwi": 90,
+      "verdict": "WORTH IT",
+      "rank": 3
+    },
+    {
+      "id": "novelai-tablet",
+      "name": "NovelAI",
+      "plan": "Tablet",
+      "vendor": "Anlatan",
+      "category": "generation",
+      "priceMonthly": 10,
+      "valuePoints": 700,
+      "bestFor": "Anime-style gen + unlimited base-res images.",
+      "weakness": "Higher-res / large batches eat Anlas credits.",
+      "link": "https://novelai.net/",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 68
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 69
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 69
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 70
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 70
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 70
+        }
+      ],
+      "valuePerDollar": 70.0,
+      "cwi": 70,
+      "verdict": "SOLID",
+      "rank": 2
+    },
+    {
+      "id": "novelai-opus",
+      "name": "NovelAI",
+      "plan": "Opus",
+      "vendor": "Anlatan",
+      "category": "generation",
+      "priceMonthly": 25,
+      "valuePoints": 2500,
+      "bestFor": "Effectively unlimited gen at the cheapest unit cost here.",
+      "weakness": "Niche aesthetic; not a general photoreal tool.",
+      "link": "https://novelai.net/",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 95
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 96
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 96
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 97
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 97
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 100
+        }
+      ],
+      "valuePerDollar": 100.0,
+      "cwi": 100,
+      "verdict": "WORTH IT",
+      "rank": 1
+    },
+    {
+      "id": "mj-basic",
+      "name": "Midjourney",
+      "plan": "Basic",
+      "vendor": "Midjourney",
+      "category": "generation",
+      "priceMonthly": 10,
+      "valuePoints": 200,
+      "bestFor": "Best-in-class aesthetics for occasional use.",
+      "weakness": "No relax mode; 3.3 fast hours runs out quickly.",
+      "link": "https://www.midjourney.com/plans",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 22
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 21
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 21
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 20
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 20
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 20
+        }
+      ],
+      "valuePerDollar": 20.0,
+      "cwi": 20,
+      "verdict": "OVERPRICED",
+      "rank": 5
+    },
+    {
+      "id": "mj-standard",
+      "name": "Midjourney",
+      "plan": "Standard",
+      "vendor": "Midjourney",
+      "category": "generation",
+      "priceMonthly": 30,
+      "valuePoints": 1200,
+      "bestFor": "Unlimited relax-mode gen + 15 fast hours.",
+      "weakness": "Pricey per-fast-image vs NovelAI's unit economics.",
+      "link": "https://www.midjourney.com/plans",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 42
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 41
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 41
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 40
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 40
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 40
+        }
+      ],
+      "valuePerDollar": 40.0,
+      "cwi": 40,
+      "verdict": "OVERPRICED",
+      "rank": 3
+    },
+    {
+      "id": "grok-imagine",
+      "name": "Grok Imagine",
+      "plan": "X Premium+",
+      "vendor": "xAI",
+      "category": "generation",
+      "priceMonthly": 40,
+      "valuePoints": 1500,
+      "bestFor": "Image + video gen bundled with the whole X Premium+ sub.",
+      "weakness": "You're really paying for X; gen quality varies by run.",
+      "link": "https://x.com/i/premium",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 34
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 35
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 36
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 37
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 38
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 38
+        }
+      ],
+      "valuePerDollar": 37.5,
+      "cwi": 38,
+      "verdict": "OVERPRICED",
+      "rank": 4
+    },
+    {
+      "id": "suno-pro",
+      "name": "Suno",
+      "plan": "Pro",
+      "vendor": "Suno",
+      "category": "music",
+      "priceMonthly": 10,
+      "valuePoints": 500,
+      "bestFor": "~500 songs/mo + commercial use; the sweet spot.",
+      "weakness": "Non-rollover credits; runs out if you batch heavily.",
+      "link": "https://suno.com/pricing",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 90
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 90
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 91
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 91
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 92
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 75
+        }
+      ],
+      "valuePerDollar": 50.0,
+      "cwi": 75,
+      "verdict": "SOLID",
+      "rank": 3
+    },
+    {
+      "id": "suno-premier",
+      "name": "Suno",
+      "plan": "Premier",
+      "vendor": "Suno",
+      "category": "music",
+      "priceMonthly": 30,
+      "valuePoints": 2000,
+      "bestFor": "10k credits/mo for high-volume producers.",
+      "weakness": "Slightly worse per-credit value than Pro.",
+      "link": "https://suno.com/pricing",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 88
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 88
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 89
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 89
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 90
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 100
+        }
+      ],
+      "valuePerDollar": 66.67,
+      "cwi": 100,
+      "verdict": "WORTH IT",
+      "rank": 1
+    },
+    {
+      "id": "udio-standard",
+      "name": "Udio",
+      "plan": "Standard",
+      "vendor": "Udio",
+      "category": "music",
+      "priceMonthly": 10,
+      "valuePoints": 400,
+      "bestFor": "Clean vocals; strong for songwriting demos.",
+      "weakness": "Fewer monthly gens per dollar than Suno Pro.",
+      "link": "https://www.udio.com/pricing",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 74
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 74
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 75
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 75
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 75
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 60
+        }
+      ],
+      "valuePerDollar": 40.0,
+      "cwi": 60,
+      "verdict": "MEH",
+      "rank": 4
+    },
+    {
+      "id": "udio-pro",
+      "name": "Udio",
+      "plan": "Pro",
+      "vendor": "Udio",
+      "category": "music",
+      "priceMonthly": 30,
+      "valuePoints": 1600,
+      "bestFor": "4x the credits for serious vocal production.",
+      "weakness": "Pricing edge still goes to Suno per credit.",
+      "link": "https://www.udio.com/pricing",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 80
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 80
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 81
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 81
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 82
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 80
+        }
+      ],
+      "valuePerDollar": 53.33,
+      "cwi": 80,
+      "verdict": "SOLID",
+      "rank": 2
+    },
+    {
+      "id": "scite",
+      "name": "Scite.ai",
+      "plan": "Premium",
+      "vendor": "Scite",
+      "category": "research",
+      "priceMonthly": 20,
+      "valuePoints": 70,
+      "bestFor": "Smart Citations — see if claims are supported or disputed.",
+      "weakness": "Narrow scope; mostly a citation-context tool.",
+      "link": "https://scite.ai/",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 72
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 72
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 73
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 73
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 73
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 48
+        }
+      ],
+      "valuePerDollar": 3.5,
+      "cwi": 48,
+      "verdict": "MEH",
+      "rank": 3
+    },
+    {
+      "id": "consensus",
+      "name": "Consensus",
+      "plan": "Premium",
+      "vendor": "Consensus",
+      "category": "research",
+      "priceMonthly": 9,
+      "valuePoints": 65,
+      "bestFor": "Unlimited evidence-based Q&A over papers; cheapest here.",
+      "weakness": "Answer synthesis can flatten nuance.",
+      "link": "https://consensus.app/pricing/",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 90
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 91
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 92
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 92
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 93
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 100
+        }
+      ],
+      "valuePerDollar": 7.22,
+      "cwi": 100,
+      "verdict": "WORTH IT",
+      "rank": 1
+    },
+    {
+      "id": "alphaxiv",
+      "name": "alphaXiv",
+      "plan": "Pro",
+      "vendor": "alphaXiv",
+      "category": "research",
+      "priceMonthly": 12,
+      "valuePoints": 60,
+      "bestFor": "Chat-with-arXiv + community annotations layer.",
+      "weakness": "Coverage skews to arXiv preprints only.",
+      "link": "https://www.alphaxiv.org/",
+      "history": [
+        {
+          "week": "2026-05-18",
+          "cwi": 78
+        },
+        {
+          "week": "2026-05-25",
+          "cwi": 79
+        },
+        {
+          "week": "2026-06-01",
+          "cwi": 80
+        },
+        {
+          "week": "2026-06-08",
+          "cwi": 80
+        },
+        {
+          "week": "2026-06-15",
+          "cwi": 81
+        },
+        {
+          "week": "2026-06-22",
+          "cwi": 69
+        }
+      ],
+      "valuePerDollar": 5.0,
+      "cwi": 69,
+      "verdict": "SOLID",
+      "rank": 2
+    }
+  ]
+}

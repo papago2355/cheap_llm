@@ -1,0 +1,20 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Vercel
+.vercel/
+
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json
+
+# Node (only if you later add tooling)
+node_modules/

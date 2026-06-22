@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IS IT WORTH IT? — AI Service Cost-Worth Index</title>
+  <meta name="description" content="A pixel-art dashboard rating AI coding, image, music & research subscriptions on a money-vs-value scale. Updated weekly." />
+  <meta property="og:title" content="IS IT WORTH IT? — AI Service Cost-Worth Index" />
+  <meta property="og:description" content="Is that AI subscription actually worth the money? A weekly pixel-art cost-effectiveness index." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230b0f1a'/%3E%3Crect x='3' y='3' width='3' height='3' fill='%2354f0b8'/%3E%3Crect x='10' y='3' width='3' height='3' fill='%23ffd23f'/%3E%3Crect x='3' y='10' width='3' height='3' fill='%23ff5d73'/%3E%3Crect x='10' y='10' width='3' height='3' fill='%237db4ff'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo">IS&nbsp;IT&nbsp;<span class="blink">WORTH</span>&nbsp;IT?</h1>
+      <p class="tagline">AI&nbsp;SERVICE COST-WORTH INDEX</p>
+      <p class="week" id="week-stamp">WEEK OF ————</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro panel">
+      <p>Every AI sub claims it's a steal. This board scores them on one brutal question:
+      <strong>how much real value do you get per dollar?</strong> Each plan gets a
+      <span class="hl">Cost-Worth Index (CWI&nbsp;0–100)</span>, ranked against its category.
+      <span class="hl">100&nbsp;=&nbsp;best value-per-dollar in its class.</span> Updated weekly.</p>
+    </section>
+
+    <nav class="controls panel" aria-label="filters">
+      <div class="control-group" id="cat-tabs" role="tablist" aria-label="category"></div>
+      <div class="control-group sorts">
+        <span class="control-label">SORT</span>
+        <button class="pixbtn sort-btn active" data-sort="cwi">WORTH</button>
+        <button class="pixbtn sort-btn" data-sort="price">PRICE</button>
+        <button class="pixbtn sort-btn" data-sort="value">VALUE/$</button>
+      </div>
+    </nav>
+
+    <p class="cat-blurb" id="cat-blurb"></p>
+
+    <section class="grid" id="card-grid" aria-live="polite"></section>
+
+    <section class="methodology panel">
+      <h2>// HOW THE SCORE WORKS</h2>
+      <ol>
+        <li><strong>Value per dollar</strong> = usable monthly value (quota + access + features) ÷ monthly price.</li>
+        <li><strong>CWI 0–100</strong> normalizes that within each category — the best-value plan in a class scores 100, the rest scale against it.</li>
+        <li><strong>Verdict bands:</strong>
+          <span class="chip worth">85+ WORTH IT</span>
+          <span class="chip solid">65–84 SOLID</span>
+          <span class="chip meh">45–64 MEH</span>
+          <span class="chip bad">&lt;45 OVERPRICED</span>
+        </li>
+        <li>CWI measures <em>quantity</em>-per-dollar. Quality, aesthetics and lock-in are captured in each card's <em>best for / weakness</em> notes — a low score isn't "bad", it means you pay a premium per unit.</li>
+      </ol>
+      <p class="disclaimer">Figures are curated human estimates of usable value, not scraped invoices. Compare classes, not absolutes. Edit <code>data/services.seed.json</code> and re-run <code>scripts/update_data.py</code> to keep it honest.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>BUILT PIXEL-BY-PIXEL · DATA REFRESHED WEEKLY · <span id="gen-stamp"></span></p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

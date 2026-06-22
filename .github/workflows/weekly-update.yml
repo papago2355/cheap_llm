@@ -1,0 +1,36 @@
+name: Weekly Cost-Worth refresh
+
+# Recomputes the index every Monday and commits the regenerated data files.
+# The commit triggers Vercel's Git integration to redeploy automatically.
+on:
+  schedule:
+    - cron: "0 6 * * 1" # 06:00 UTC every Monday
+  workflow_dispatch: {}   # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Recompute index
+        run: python scripts/update_data.py
+
+      - name: Commit if data changed
+        run: |
+          git config user.name "worth-bot"
+          git config user.email "actions@github.com"
+          git add data/services.json js/data.js
+          if git diff --staged --quiet; then
+            echo "No changes this week."
+          else
+            git commit -m "chore: weekly Cost-Worth refresh ($(date -u +%Y-%m-%d))"
+            git push
+          fi

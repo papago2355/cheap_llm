@@ -30,8 +30,11 @@
       <p>Every AI sub claims it's a steal. This board scores them on one brutal question:
       <strong>how much real value do you get per dollar?</strong> Each plan gets a
       <span class="hl">Cost-Worth Index (CWI&nbsp;0–100)</span>, ranked against its category.
-      <span class="hl">100&nbsp;=&nbsp;best value-per-dollar in its class.</span> Updated weekly.</p>
+      <span class="hl">100&nbsp;=&nbsp;best value-per-dollar in its class.</span> Prices are
+      <span class="hl">fetched &amp; verified weekly from official pricing pages</span>.</p>
     </section>
+
+    <section class="liveband panel" id="live-band" aria-label="live API token prices"></section>
 
     <nav class="controls panel" aria-label="filters">
       <div class="control-group" id="cat-tabs" role="tablist" aria-label="category"></div>
@@ -50,6 +53,11 @@
     <section class="methodology panel">
       <h2>// HOW THE SCORE WORKS</h2>
       <ol>
+        <li><strong>Live prices</strong> — every Monday a script fetches each service's
+          <em>official pricing page</em> and auto-confirms the monthly price, or flags it for
+          review if the page is JS-gated. Each card shows its source + check date:
+          <span class="prov live">● LIVE</span> <span class="prov verified">✓ VERIFIED</span>
+          <span class="prov review">⚠ REVIEW</span> <span class="prov manual">EST.</span></li>
         <li><strong>Value per dollar</strong> = usable monthly value (quota + access + features) ÷ monthly price.</li>
         <li><strong>CWI 0–100</strong> normalizes that within each category — the best-value plan in a class scores 100, the rest scale against it.</li>
         <li><strong>Verdict bands:</strong>

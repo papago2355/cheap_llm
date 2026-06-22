@@ -1,0 +1,30 @@
+{
+  "_comment": "Official pricing sources. fetch_prices.py reads this weekly: it tries to auto-extract the monthly price (month-context + sane range), else verifies the reference price is still present on the page, else flags for review. 'ref' is the last human-confirmed monthly USD price; 'range' bounds a sane monthly value to reject garbage matches.",
+  "sources": [
+    { "id": "cc-pro",        "url": "https://www.anthropic.com/pricing",                                                   "ref": 20,  "range": [10, 30],   "anchors": ["Pro"] },
+    { "id": "cc-max5",       "url": "https://www.anthropic.com/pricing",                                                   "ref": 100, "range": [80, 130],  "anchors": ["Max", "5x"] },
+    { "id": "cc-max20",      "url": "https://www.anthropic.com/pricing",                                                   "ref": 200, "range": [150, 260], "anchors": ["Max", "20x"] },
+    { "id": "cursor-pro",    "url": "https://cursor.com/pricing",                                                          "ref": 20,  "range": [15, 30],   "anchors": ["Pro"] },
+    { "id": "cursor-ultra",  "url": "https://cursor.com/pricing",                                                          "ref": 200, "range": [150, 260], "anchors": ["Ultra"] },
+    { "id": "copilot-pro",   "url": "https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot",    "ref": 10,  "range": [8, 15],    "anchors": ["Pro"] },
+    { "id": "copilot-proplus","url": "https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot",   "ref": 39,  "range": [30, 50],   "anchors": ["Pro+"] },
+    { "id": "codex-plus",    "url": "https://openai.com/chatgpt/pricing/",                                                 "ref": 20,  "range": [15, 30],   "anchors": ["Plus"] },
+    { "id": "codex-pro",     "url": "https://openai.com/chatgpt/pricing/",                                                 "ref": 200, "range": [150, 260], "anchors": ["Pro"] },
+    { "id": "novelai-tablet","url": "https://novelai.net/",                                                                "ref": 10,  "range": [8, 15],    "anchors": ["Tablet"] },
+    { "id": "novelai-opus",  "url": "https://novelai.net/",                                                                "ref": 25,  "range": [20, 30],   "anchors": ["Opus"] },
+    { "id": "mj-basic",      "url": "https://www.midjourney.com/pricing",                                                  "ref": 10,  "range": [8, 15],    "anchors": ["Basic"] },
+    { "id": "mj-standard",   "url": "https://www.midjourney.com/pricing",                                                  "ref": 30,  "range": [25, 40],   "anchors": ["Standard"] },
+    { "id": "grok-imagine",  "url": "https://x.com/i/premium",                                                             "ref": 40,  "range": [30, 60],   "anchors": ["Premium"] },
+    { "id": "suno-pro",      "url": "https://suno.com/pricing",                                                            "ref": 10,  "range": [8, 15],    "anchors": ["Pro"] },
+    { "id": "suno-premier",  "url": "https://suno.com/pricing",                                                            "ref": 30,  "range": [25, 40],   "anchors": ["Premier"] },
+    { "id": "udio-standard", "url": "https://www.udio.com/pricing",                                                        "ref": 10,  "range": [8, 15],    "anchors": ["Standard"] },
+    { "id": "udio-pro",      "url": "https://www.udio.com/pricing",                                                        "ref": 30,  "range": [25, 40],   "anchors": ["Pro"] },
+    { "id": "scite",         "url": "https://scite.ai/pricing",                                                           "ref": 20,  "range": [15, 30],   "anchors": ["Premium"] },
+    { "id": "consensus",     "url": "https://consensus.app/pricing/",                                                      "ref": 9,   "range": [7, 15],    "anchors": ["Premium"] },
+    { "id": "alphaxiv",      "url": "https://www.alphaxiv.org/",                                                           "ref": 12,  "range": [8, 20],    "anchors": ["Pro"] }
+  ],
+  "apiModels": [
+    { "id": "openai-gpt-4o",  "label": "GPT-4o",        "vendor": "OpenAI",    "url": "https://platform.openai.com/docs/pricing", "match": "gpt-4o",  "inRef": 2.5,  "outRef": 10.0 },
+    { "id": "openai-gpt-4o-mini","label": "GPT-4o mini","vendor": "OpenAI",    "url": "https://platform.openai.com/docs/pricing", "match": "gpt-4o-mini", "inRef": 0.15, "outRef": 0.6 }
+  ]
+}

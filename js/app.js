@@ -40,6 +40,29 @@
   document.getElementById("week-stamp").textContent = "WEEK OF " + fmtWeek(DATA.meta.weekOf);
   document.getElementById("gen-stamp").textContent = "GENERATED " + fmtWeek(DATA.meta.weekOf);
 
+  /* ---------- live API token-price band ---------- */
+  (function () {
+    var band = document.getElementById("live-band");
+    var models = DATA.apiModels || [];
+    if (!band) return;
+    if (!models.length) { band.style.display = "none"; return; }
+    var head = el("div", "liveband-head",
+      "LIVE API TOKEN PRICES <span class='lb-sub'>per 1M tokens · checked " +
+      fmtWeek(DATA.meta.priceCheckedAt || DATA.meta.weekOf) + "</span>");
+    band.appendChild(head);
+    var row = el("div", "liveband-row");
+    models.forEach(function (m) {
+      var dot = m.status && m.status.indexOf("live") === 0 ? "live" : "verified";
+      var chip = el("div", "lb-chip");
+      chip.innerHTML =
+        "<span class='lb-dot " + dot + "'></span>" +
+        "<span class='lb-name'>" + esc(m.label) + "</span>" +
+        "<span class='lb-px'>in $" + m.inputPerM + " · out $" + m.outputPerM + "</span>";
+      row.appendChild(chip);
+    });
+    band.appendChild(row);
+  })();
+
   /* ---------- category tabs ---------- */
   var tabs = document.getElementById("cat-tabs");
   tabs.appendChild(el("span", "control-label", "CATEGORY"));
@@ -92,6 +115,29 @@
     return { node: wrap, first: vals[0], last: vals[vals.length - 1] };
   }
 
+  var PROV = {
+    "live":         { cls: "live",     txt: "● LIVE" },
+    "live-changed": { cls: "live",     txt: "● LIVE ↻" },
+    "verified":     { cls: "verified", txt: "✓ VERIFIED" },
+    "review":       { cls: "review",   txt: "⚠ REVIEW" },
+    "unreachable":  { cls: "review",   txt: "✕ OFFLINE" },
+    "manual":       { cls: "manual",   txt: "EST." }
+  };
+  function buildProvenance(s) {
+    var p = PROV[s.priceStatus] || PROV.manual;
+    var wrap = el("div", "provenance");
+    var badge = el("span", "prov " + p.cls, p.txt);
+    wrap.appendChild(badge);
+    if (s.priceCheckedAt) wrap.appendChild(el("span", "prov-date", "checked " + fmtWeek(s.priceCheckedAt)));
+    if (s.priceSource) {
+      var a = el("a", "prov-src", "src");
+      a.href = s.priceSource; a.target = "_blank"; a.rel = "noopener";
+      a.title = s.priceSource;
+      wrap.appendChild(a);
+    }
+    return wrap;
+  }
+
   function buildCard(s) {
     var accent = ACCENT[s.verdict] || "var(--green)";
     var card = el("div", "card");
@@ -107,11 +153,12 @@
     top.appendChild(el("div", "rank-badge", "#" + (s.rank || "-") + " IN " + catName(s.category).toUpperCase()));
     card.appendChild(top);
 
-    /* price */
+    /* price + provenance */
     var price = el("div", "price-row");
     price.appendChild(el("span", "price", "$" + s.priceMonthly));
     price.appendChild(el("span", "price-unit", "/ month"));
     card.appendChild(price);
+    card.appendChild(buildProvenance(s));
 
     /* worth meter */
     var ml = el("div", "meter-label");

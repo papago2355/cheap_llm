@@ -132,6 +132,41 @@ h1, h2, .pixbtn, .rank-badge, .verdict, .price, .cwi-num, .svc-name,
   box-shadow: calc(var(--px)) calc(var(--px)) 0 rgba(0,0,0,.45);
 }
 
+/* ---------- Live API token-price band ---------- */
+.liveband { background: var(--panel-2); border-color: var(--green); }
+.liveband-head {
+  font-family: "Press Start 2P", monospace; font-size: 12px; color: var(--green);
+  letter-spacing: 1px; margin-bottom: 14px;
+}
+.liveband-head .lb-sub { color: var(--ink-dim); font-size: 10px; margin-left: 8px; letter-spacing: 0; }
+.liveband-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.lb-chip {
+  display: flex; align-items: center; gap: 9px;
+  background: var(--panel); border: 3px solid var(--line); padding: 9px 12px;
+}
+.lb-dot { width: 11px; height: 11px; flex: 0 0 11px; }
+.lb-dot.live { background: var(--green); box-shadow: 0 0 7px var(--green); animation: blink 1.4s steps(1) infinite; }
+.lb-dot.verified { background: var(--blue); }
+.lb-name { font-family: "Press Start 2P", monospace; font-size: 11px; color: var(--ink); }
+.lb-px { font-size: 19px; color: var(--yellow); }
+
+/* ---------- Price provenance badge ---------- */
+.provenance { display: flex; align-items: center; gap: 9px; margin-top: -4px; flex-wrap: wrap; }
+.prov {
+  font-family: "Press Start 2P", monospace; font-size: 9px; padding: 5px 7px;
+  letter-spacing: .5px; border: 2px solid currentColor;
+}
+.prov.live     { color: var(--green); }
+.prov.verified { color: var(--blue); }
+.prov.review   { color: var(--yellow); }
+.prov.manual   { color: var(--ink-dim); }
+.prov-date { font-size: 16px; color: var(--ink-dim); }
+.prov-src {
+  font-family: "Press Start 2P", monospace; font-size: 9px; color: var(--ink-dim);
+  text-decoration: none; border-bottom: 2px dotted var(--ink-dim);
+}
+.prov-src:hover { color: var(--blue); border-color: var(--blue); }
+
 /* ---------- Category blurb ---------- */
 .cat-blurb {
   font-size: 24px; color: var(--ink); margin: 0 0 18px; padding-left: 10px;

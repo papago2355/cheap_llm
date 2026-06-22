@@ -20,6 +20,9 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Fetch live prices from official pages
+        run: python scripts/fetch_prices.py
+
       - name: Recompute index
         run: python scripts/update_data.py
 
@@ -27,10 +30,24 @@ jobs:
         run: |
           git config user.name "worth-bot"
           git config user.email "actions@github.com"
-          git add data/services.json js/data.js
+          git add data/prices.live.json data/services.json js/data.js
           if git diff --staged --quiet; then
             echo "No changes this week."
           else
-            git commit -m "chore: weekly Cost-Worth refresh ($(date -u +%Y-%m-%d))"
+            git commit -m "chore: weekly live price + Cost-Worth refresh ($(date -u +%Y-%m-%d))"
             git push
           fi
+
+      - name: Summarize price-check to job log
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/prices.live.json',encoding='utf-8'))
+          from collections import Counter
+          c=Counter(v['status'] for v in d['services'].values())
+          print('Price check', d['checkedDate'], dict(c))
+          for k,v in d['services'].items():
+              if v['status'] not in ('live','verified'):
+                  print('  REVIEW:', k, v['status'], v['source'])
+          PY

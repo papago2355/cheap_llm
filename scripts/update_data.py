@@ -28,8 +28,17 @@ import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SEED = os.path.join(ROOT, "data", "services.seed.json")
+LIVE = os.path.join(ROOT, "data", "prices.live.json")
 OUT_JSON = os.path.join(ROOT, "data", "services.json")
 OUT_JS = os.path.join(ROOT, "js", "data.js")
+
+
+def load_live():
+    """Load fetch_prices.py output if present; otherwise return None (curated mode)."""
+    if not os.path.exists(LIVE):
+        return None
+    with open(LIVE, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 def verdict_for(cwi):
@@ -66,6 +75,27 @@ def main():
         data = json.load(f)
 
     services = data["services"]
+
+    # 0. merge live price provenance (from fetch_prices.py) onto each service
+    live = load_live()
+    if live:
+        lsvc = live.get("services", {})
+        for s in services:
+            info = lsvc.get(s["id"])
+            if not info:
+                s["priceStatus"] = "manual"
+                continue
+            # adopt an auto-extracted live price only when the fetcher is confident
+            if info["status"] in ("live", "live-changed"):
+                s["priceMonthly"] = info["price"]
+            s["priceStatus"] = info["status"]
+            s["priceSource"] = info["source"]
+            s["priceCheckedAt"] = info["checkedAt"]
+        data["apiModels"] = live.get("apiModels", [])
+        data["meta"]["priceCheckedAt"] = live.get("checkedDate")
+    else:
+        for s in services:
+            s["priceStatus"] = "manual"
 
     # 1. value-per-dollar for each paid service
     for s in services:

@@ -1,0 +1,218 @@
+{
+  "generatedAt": "2026-06-22T20:23:35",
+  "checkedDate": "2026-06-22",
+  "services": {
+    "cc-pro": {
+      "id": "cc-pro",
+      "source": "https://www.anthropic.com/pricing",
+      "ref": 20,
+      "price": 20,
+      "checkedAt": "2026-06-22",
+      "status": "verified",
+      "httpOk": true
+    },
+    "cc-max5": {
+      "id": "cc-max5",
+      "source": "https://www.anthropic.com/pricing",
+      "ref": 100,
+      "price": 100,
+      "checkedAt": "2026-06-22",
+      "status": "live",
+      "httpOk": true
+    },
+    "cc-max20": {
+      "id": "cc-max20",
+      "source": "https://www.anthropic.com/pricing",
+      "ref": 200,
+      "price": 200,
+      "checkedAt": "2026-06-22",
+      "status": "verified",
+      "httpOk": true
+    },
+    "cursor-pro": {
+      "id": "cursor-pro",
+      "source": "https://cursor.com/pricing",
+      "ref": 20,
+      "price": 20,
+      "checkedAt": "2026-06-22",
+      "status": "verified",
+      "httpOk": true
+    },
+    "cursor-ultra": {
+      "id": "cursor-ultra",
+      "source": "https://cursor.com/pricing",
+      "ref": 200,
+      "price": 200,
+      "checkedAt": "2026-06-22",
+      "status": "review",
+      "httpOk": true
+    },
+    "copilot-pro": {
+      "id": "copilot-pro",
+      "source": "https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot",
+      "ref": 10,
+      "price": 10,
+      "checkedAt": "2026-06-22",
+      "status": "live",
+      "httpOk": true
+    },
+    "copilot-proplus": {
+      "id": "copilot-proplus",
+      "source": "https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot",
+      "ref": 39,
+      "price": 39,
+      "checkedAt": "2026-06-22",
+      "status": "live",
+      "httpOk": true
+    },
+    "codex-plus": {
+      "id": "codex-plus",
+      "source": "https://openai.com/chatgpt/pricing/",
+      "ref": 20,
+      "price": 20,
+      "checkedAt": "2026-06-22",
+      "status": "review",
+      "httpOk": true
+    },
+    "codex-pro": {
+      "id": "codex-pro",
+      "source": "https://openai.com/chatgpt/pricing/",
+      "ref": 200,
+      "price": 200,
+      "checkedAt": "2026-06-22",
+      "status": "review",
+      "httpOk": true
+    },
+    "novelai-tablet": {
+      "id": "novelai-tablet",
+      "source": "https://novelai.net/",
+      "ref": 10,
+      "price": 10,
+      "checkedAt": "2026-06-22",
+      "status": "live",
+      "httpOk": true
+    },
+    "novelai-opus": {
+      "id": "novelai-opus",
+      "source": "https://novelai.net/",
+      "ref": 25,
+      "price": 25,
+      "checkedAt": "2026-06-22",
+      "status": "live",
+      "httpOk": true
+    },
+    "mj-basic": {
+      "id": "mj-basic",
+      "source": "https://www.midjourney.com/pricing",
+      "ref": 10,
+      "price": 10,
+      "checkedAt": "2026-06-22",
+      "status": "unreachable",
+      "httpOk": false,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    "mj-standard": {
+      "id": "mj-standard",
+      "source": "https://www.midjourney.com/pricing",
+      "ref": 30,
+      "price": 30,
+      "checkedAt": "2026-06-22",
+      "status": "review",
+      "httpOk": true
+    },
+    "grok-imagine": {
+      "id": "grok-imagine",
+      "source": "https://x.com/i/premium",
+      "ref": 40,
+      "price": 40,
+      "checkedAt": "2026-06-22",
+      "status": "review",
+      "httpOk": true
+    },
+    "suno-pro": {
+      "id": "suno-pro",
+      "source": "https://suno.com/pricing",
+      "ref": 10,
+      "price": 10,
+      "checkedAt": "2026-06-22",
+      "status": "review",
+      "httpOk": true
+    },
+    "suno-premier": {
+      "id": "suno-premier",
+      "source": "https://suno.com/pricing",
+      "ref": 30,
+      "price": 30,
+      "checkedAt": "2026-06-22",
+      "status": "review",
+      "httpOk": true
+    },
+    "udio-standard": {
+      "id": "udio-standard",
+      "source": "https://www.udio.com/pricing",
+      "ref": 10,
+      "price": 10,
+      "checkedAt": "2026-06-22",
+      "status": "review",
+      "httpOk": true
+    },
+    "udio-pro": {
+      "id": "udio-pro",
+      "source": "https://www.udio.com/pricing",
+      "ref": 30,
+      "price": 30,
+      "checkedAt": "2026-06-22",
+      "status": "review",
+      "httpOk": true
+    },
+    "scite": {
+      "id": "scite",
+      "source": "https://scite.ai/pricing",
+      "ref": 20,
+      "price": 20,
+      "checkedAt": "2026-06-22",
+      "status": "verified",
+      "httpOk": true
+    },
+    "consensus": {
+      "id": "consensus",
+      "source": "https://consensus.app/pricing/",
+      "ref": 9,
+      "price": 9,
+      "checkedAt": "2026-06-22",
+      "status": "review",
+      "httpOk": true
+    },
+    "alphaxiv": {
+      "id": "alphaxiv",
+      "source": "https://www.alphaxiv.org/",
+      "ref": 12,
+      "price": 12,
+      "checkedAt": "2026-06-22",
+      "status": "review",
+      "httpOk": true
+    }
+  },
+  "apiModels": [
+    {
+      "id": "openai-gpt-4o",
+      "label": "GPT-4o",
+      "vendor": "OpenAI",
+      "source": "https://platform.openai.com/docs/pricing",
+      "checkedAt": "2026-06-22",
+      "inputPerM": 2.5,
+      "outputPerM": 10.0,
+      "status": "verified"
+    },
+    {
+      "id": "openai-gpt-4o-mini",
+      "label": "GPT-4o mini",
+      "vendor": "OpenAI",
+      "source": "https://platform.openai.com/docs/pricing",
+      "checkedAt": "2026-06-22",
+      "inputPerM": 0.15,
+      "outputPerM": 0.6,
+      "status": "verified"
+    }
+  ]
+}

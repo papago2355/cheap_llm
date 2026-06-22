@@ -37,17 +37,48 @@ break on deploy. Data is generated into `js/data.js` by a small Python script.
 
 ```
 .
-├── index.html              # the page
-├── css/styles.css          # pixel-art theme (Press Start 2P + VT323, CRT scanlines)
-├── js/app.js               # renders cards from window.DATA
-├── js/data.js              # GENERATED — window.DATA = {...}
+├── index.html               # the page
+├── css/styles.css           # pixel-art theme (Press Start 2P + VT323, CRT scanlines)
+├── js/app.js                # renders cards + live band from window.DATA
+├── js/data.js               # GENERATED — window.DATA = {...}
 ├── data/
-│   ├── services.seed.json  # SOURCE OF TRUTH — edit this
-│   └── services.json       # GENERATED — portable copy of the computed data
-├── scripts/update_data.py  # computes CWI + appends weekly snapshot
-├── vercel.json             # static deploy config + cache headers
-└── .github/workflows/weekly-update.yml  # auto-refresh every Monday
+│   ├── services.seed.json   # value estimates + notes (edit this)
+│   ├── sources.json         # official pricing URLs + reference prices (edit this)
+│   ├── prices.live.json     # GENERATED — weekly price-check result + provenance
+│   └── services.json        # GENERATED — final computed data
+├── scripts/
+│   ├── fetch_prices.py      # fetches official pages → live/verified/review + provenance
+│   └── update_data.py       # merges live prices, computes CWI, appends weekly snapshot
+├── vercel.json              # static deploy config + cache headers
+└── .github/workflows/weekly-update.yml  # auto fetch + refresh every Monday
 ```
+
+## Live prices & provenance
+
+Prices are **not assumed** — every Monday `fetch_prices.py` hits each service's
+**official pricing page** (`data/sources.json`) and assigns each a status, shown as a
+badge on every card:
+
+| Badge | Meaning |
+|-------|---------|
+| `● LIVE` | Monthly price auto-extracted from the page (month-context + sane-range gated). `↻` = it changed since last week. |
+| `✓ VERIFIED` | Reference price string still present on the official page. |
+| `⚠ REVIEW` | Page reachable but the price wasn't found (JS-gated or layout change) — the known value is kept and flagged. |
+| `✕ OFFLINE` | Page unreachable this run — last value kept. |
+| `EST.` | No automated source wired (curated value). |
+
+The extractor **refuses to overwrite a price with a low-confidence parse** — it must find
+a monthly-context match inside the expected range, otherwise it falls back to verify/review.
+This avoids the classic scrape failure of publishing an annual rate (e.g. `$17/mo billed
+annually`) as the monthly price. Each card links its `src` and shows the check date.
+
+It also fetches **live API token prices** for frontier models (the "is Opus worth it per
+token" signal) into the strip at the top of the page.
+
+> **Why not a full headless scrape of every tier?** Tiers like Cursor Ultra and ChatGPT
+> Plus/Pro are rendered client-side and aren't in the static HTML. Capturing those reliably
+> needs a headless browser (Playwright) in CI — a documented upgrade path. The current
+> routine auto-confirms ~9 plans and honestly flags the rest rather than guessing.
 
 ## Run locally
 
@@ -63,17 +94,20 @@ Or with the Vercel CLI: `vercel dev`.
 
 ## Update the data
 
-1. Edit prices / `valuePoints` / notes in **`data/services.seed.json`**.
-2. Recompute and regenerate the site data:
-
 ```powershell
-python scripts/update_data.py
-# or stamp a specific ISO week:
+python scripts/fetch_prices.py     # 1. fetch live prices from official pages
+python scripts/update_data.py      # 2. merge + recompute CWI + append weekly snapshot
+# stamp a specific ISO week if needed:
 python scripts/update_data.py --week 2026-06-29
 ```
 
-This rewrites `data/services.json` and `js/data.js`, and appends this week's CWI to each
-service's `history` (keeping the last 12 weeks).
+Step 1 writes `data/prices.live.json` (price + status + source + check date per service).
+Step 2 merges it, recomputes the index, and rewrites `data/services.json` + `js/data.js`,
+appending this week's CWI to each service's `history` (last 12 weeks kept). `update_data.py`
+runs fine without step 1 — it just falls back to the reference prices (`EST.` badges).
+
+To tune value estimates/notes edit `data/services.seed.json`; to add/point a price source
+edit `data/sources.json`.
 
 ## Deploy to Vercel
 

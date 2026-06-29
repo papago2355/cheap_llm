@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-06-22T20:23:35",
-  "checkedDate": "2026-06-22",
+  "generatedAt": "2026-06-29T10:20:59",
+  "checkedDate": "2026-06-29",
   "services": {
     "cc-pro": {
       "id": "cc-pro",
       "source": "https://www.anthropic.com/pricing",
       "ref": 20,
       "price": 20,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "verified",
       "httpOk": true
     },
@@ -16,7 +16,7 @@
       "source": "https://www.anthropic.com/pricing",
       "ref": 100,
       "price": 100,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "live",
       "httpOk": true
     },
@@ -25,7 +25,7 @@
       "source": "https://www.anthropic.com/pricing",
       "ref": 200,
       "price": 200,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "verified",
       "httpOk": true
     },
@@ -34,7 +34,7 @@
       "source": "https://cursor.com/pricing",
       "ref": 20,
       "price": 20,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "verified",
       "httpOk": true
     },
@@ -43,7 +43,7 @@
       "source": "https://cursor.com/pricing",
       "ref": 200,
       "price": 200,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "review",
       "httpOk": true
     },
@@ -52,7 +52,7 @@
       "source": "https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot",
       "ref": 10,
       "price": 10,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "live",
       "httpOk": true
     },
@@ -61,7 +61,7 @@
       "source": "https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot",
       "ref": 39,
       "price": 39,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "live",
       "httpOk": true
     },
@@ -70,25 +70,27 @@
       "source": "https://openai.com/chatgpt/pricing/",
       "ref": 20,
       "price": 20,
-      "checkedAt": "2026-06-22",
-      "status": "review",
-      "httpOk": true
+      "checkedAt": "2026-06-29",
+      "status": "unreachable",
+      "httpOk": false,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     "codex-pro": {
       "id": "codex-pro",
       "source": "https://openai.com/chatgpt/pricing/",
       "ref": 200,
       "price": 200,
-      "checkedAt": "2026-06-22",
-      "status": "review",
-      "httpOk": true
+      "checkedAt": "2026-06-29",
+      "status": "unreachable",
+      "httpOk": false,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     "novelai-tablet": {
       "id": "novelai-tablet",
       "source": "https://novelai.net/",
       "ref": 10,
       "price": 10,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "live",
       "httpOk": true
     },
@@ -97,7 +99,7 @@
       "source": "https://novelai.net/",
       "ref": 25,
       "price": 25,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "live",
       "httpOk": true
     },
@@ -106,7 +108,7 @@
       "source": "https://www.midjourney.com/pricing",
       "ref": 10,
       "price": 10,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "unreachable",
       "httpOk": false,
       "error": "HTTPError: HTTP Error 403: Forbidden"
@@ -116,16 +118,17 @@
       "source": "https://www.midjourney.com/pricing",
       "ref": 30,
       "price": 30,
-      "checkedAt": "2026-06-22",
-      "status": "review",
-      "httpOk": true
+      "checkedAt": "2026-06-29",
+      "status": "unreachable",
+      "httpOk": false,
+      "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     "grok-imagine": {
       "id": "grok-imagine",
       "source": "https://x.com/i/premium",
       "ref": 40,
       "price": 40,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "review",
       "httpOk": true
     },
@@ -134,7 +137,7 @@
       "source": "https://suno.com/pricing",
       "ref": 10,
       "price": 10,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "review",
       "httpOk": true
     },
@@ -143,7 +146,7 @@
       "source": "https://suno.com/pricing",
       "ref": 30,
       "price": 30,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "review",
       "httpOk": true
     },
@@ -152,7 +155,7 @@
       "source": "https://www.udio.com/pricing",
       "ref": 10,
       "price": 10,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "review",
       "httpOk": true
     },
@@ -161,7 +164,7 @@
       "source": "https://www.udio.com/pricing",
       "ref": 30,
       "price": 30,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "review",
       "httpOk": true
     },
@@ -170,7 +173,7 @@
       "source": "https://scite.ai/pricing",
       "ref": 20,
       "price": 20,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "verified",
       "httpOk": true
     },
@@ -179,7 +182,7 @@
       "source": "https://consensus.app/pricing/",
       "ref": 9,
       "price": 9,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "review",
       "httpOk": true
     },
@@ -188,7 +191,7 @@
       "source": "https://www.alphaxiv.org/",
       "ref": 12,
       "price": 12,
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "status": "review",
       "httpOk": true
     }
@@ -199,7 +202,7 @@
       "label": "GPT-4o",
       "vendor": "OpenAI",
       "source": "https://platform.openai.com/docs/pricing",
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "inputPerM": 2.5,
       "outputPerM": 10.0,
       "status": "verified"
@@ -209,7 +212,7 @@
       "label": "GPT-4o mini",
       "vendor": "OpenAI",
       "source": "https://platform.openai.com/docs/pricing",
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "inputPerM": 0.15,
       "outputPerM": 0.6,
       "status": "verified"

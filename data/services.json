@@ -3,9 +3,9 @@
     "title": "IS IT WORTH IT?",
     "subtitle": "AI Service Cost-Worth Index",
     "methodologyVersion": "1.0",
-    "weekOf": "2026-06-22",
-    "priceCheckedAt": "2026-06-22",
-    "generatedAt": "2026-06-22T20:25:36"
+    "weekOf": "2026-06-29",
+    "priceCheckedAt": "2026-06-29",
+    "generatedAt": "2026-06-29T10:20:59"
   },
   "categories": [
     {
@@ -71,13 +71,13 @@
           "cwi": 81
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 75
         }
       ],
       "priceStatus": "verified",
       "priceSource": "https://www.anthropic.com/pricing",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 4.75,
       "cwi": 75,
       "verdict": "SOLID",
@@ -116,13 +116,13 @@
           "cwi": 92
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 89
         }
       ],
       "priceStatus": "live",
       "priceSource": "https://www.anthropic.com/pricing",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 5.6,
       "cwi": 89,
       "verdict": "WORTH IT",
@@ -161,13 +161,13 @@
           "cwi": 97
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 100
         }
       ],
       "priceStatus": "verified",
       "priceSource": "https://www.anthropic.com/pricing",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 6.3,
       "cwi": 100,
       "verdict": "WORTH IT",
@@ -206,13 +206,13 @@
           "cwi": 82
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 83
         }
       ],
       "priceStatus": "verified",
       "priceSource": "https://cursor.com/pricing",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 5.25,
       "cwi": 83,
       "verdict": "SOLID",
@@ -251,13 +251,13 @@
           "cwi": 83
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 86
         }
       ],
       "priceStatus": "review",
       "priceSource": "https://cursor.com/pricing",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 5.4,
       "cwi": 86,
       "verdict": "WORTH IT",
@@ -296,13 +296,13 @@
           "cwi": 71
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 95
         }
       ],
       "priceStatus": "live",
       "priceSource": "https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 6.0,
       "cwi": 95,
       "verdict": "WORTH IT",
@@ -341,13 +341,13 @@
           "cwi": 78
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 85
         }
       ],
       "priceStatus": "live",
       "priceSource": "https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 5.38,
       "cwi": 85,
       "verdict": "WORTH IT",
@@ -386,13 +386,13 @@
           "cwi": 82
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 79
         }
       ],
-      "priceStatus": "review",
+      "priceStatus": "unreachable",
       "priceSource": "https://openai.com/chatgpt/pricing/",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 5.0,
       "cwi": 79,
       "verdict": "SOLID",
@@ -431,13 +431,13 @@
           "cwi": 89
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 90
         }
       ],
-      "priceStatus": "review",
+      "priceStatus": "unreachable",
       "priceSource": "https://openai.com/chatgpt/pricing/",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 5.7,
       "cwi": 90,
       "verdict": "WORTH IT",
@@ -476,13 +476,13 @@
           "cwi": 70
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 70
         }
       ],
       "priceStatus": "live",
       "priceSource": "https://novelai.net/",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 70.0,
       "cwi": 70,
       "verdict": "SOLID",
@@ -521,13 +521,13 @@
           "cwi": 97
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 100
         }
       ],
       "priceStatus": "live",
       "priceSource": "https://novelai.net/",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 100.0,
       "cwi": 100,
       "verdict": "WORTH IT",
@@ -566,13 +566,13 @@
           "cwi": 20
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 20
         }
       ],
       "priceStatus": "unreachable",
       "priceSource": "https://www.midjourney.com/pricing",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 20.0,
       "cwi": 20,
       "verdict": "OVERPRICED",
@@ -611,13 +611,13 @@
           "cwi": 40
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 40
         }
       ],
-      "priceStatus": "review",
+      "priceStatus": "unreachable",
       "priceSource": "https://www.midjourney.com/pricing",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 40.0,
       "cwi": 40,
       "verdict": "OVERPRICED",
@@ -656,13 +656,13 @@
           "cwi": 38
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 38
         }
       ],
       "priceStatus": "review",
       "priceSource": "https://x.com/i/premium",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 37.5,
       "cwi": 38,
       "verdict": "OVERPRICED",
@@ -701,13 +701,13 @@
           "cwi": 92
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 75
         }
       ],
       "priceStatus": "review",
       "priceSource": "https://suno.com/pricing",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 50.0,
       "cwi": 75,
       "verdict": "SOLID",
@@ -746,13 +746,13 @@
           "cwi": 90
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 100
         }
       ],
       "priceStatus": "review",
       "priceSource": "https://suno.com/pricing",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 66.67,
       "cwi": 100,
       "verdict": "WORTH IT",
@@ -791,13 +791,13 @@
           "cwi": 75
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 60
         }
       ],
       "priceStatus": "review",
       "priceSource": "https://www.udio.com/pricing",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 40.0,
       "cwi": 60,
       "verdict": "MEH",
@@ -836,13 +836,13 @@
           "cwi": 82
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 80
         }
       ],
       "priceStatus": "review",
       "priceSource": "https://www.udio.com/pricing",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 53.33,
       "cwi": 80,
       "verdict": "SOLID",
@@ -881,13 +881,13 @@
           "cwi": 73
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 48
         }
       ],
       "priceStatus": "verified",
       "priceSource": "https://scite.ai/pricing",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 3.5,
       "cwi": 48,
       "verdict": "MEH",
@@ -926,13 +926,13 @@
           "cwi": 93
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 100
         }
       ],
       "priceStatus": "review",
       "priceSource": "https://consensus.app/pricing/",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 7.22,
       "cwi": 100,
       "verdict": "WORTH IT",
@@ -971,13 +971,13 @@
           "cwi": 81
         },
         {
-          "week": "2026-06-22",
+          "week": "2026-06-29",
           "cwi": 69
         }
       ],
       "priceStatus": "review",
       "priceSource": "https://www.alphaxiv.org/",
-      "priceCheckedAt": "2026-06-22",
+      "priceCheckedAt": "2026-06-29",
       "valuePerDollar": 5.0,
       "cwi": 69,
       "verdict": "SOLID",
@@ -990,7 +990,7 @@
       "label": "GPT-4o",
       "vendor": "OpenAI",
       "source": "https://platform.openai.com/docs/pricing",
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "inputPerM": 2.5,
       "outputPerM": 10.0,
       "status": "verified"
@@ -1000,7 +1000,7 @@
       "label": "GPT-4o mini",
       "vendor": "OpenAI",
       "source": "https://platform.openai.com/docs/pricing",
-      "checkedAt": "2026-06-22",
+      "checkedAt": "2026-06-29",
       "inputPerM": 0.15,
       "outputPerM": 0.6,
       "status": "verified"
